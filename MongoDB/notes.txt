@@ -1,0 +1,12 @@
+->to run mongoDB shell download mongosh.
+->Type mongosh to start the shell.
+->test is the temporary database name created defaulty by mongoDB.
+->collections are like tables and documents are like rows.
+->documents are kind of json objects which are called as bson means binary json and faster to process since they will be stored in binary.
+->documents are stored in collections and collections are stored in db just like rows stored in tables and tables stored in db.
+->const User = mongoose.model("User",userSchema);
+    "User" will be sent to DB as Users and a collection named Users is created in the DB with the userSchema.
+    userSchema has the schema format defined in it.
+    User variable is the model here.
+->mongoose uses operational buffer which means it will load all the models and code until a connection is established between db and server and as soon as connection is established it saves and retrieves but till then it manages so that we donot have to use await before connection keyword.
+->all operation happening on the model named here User is actually happening on local model and getting updated on server by mongoose.

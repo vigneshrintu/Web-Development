@@ -1,0 +1,90 @@
+->Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to build server-side and networking applications. It's built on the V8 JavaScript engine, which powers Google Chrome, and it enables you to run JavaScript code outside of a web browser. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for building scalable and real-time applications.
+
+->Node.js is just a runtime environment used to run the JS in server and it is not a framework library or language.
+
+->node fileName.js will run the fileName script.
+
+->node fileName.js commandLineArg1 commandLineArg2 commandLineArg3 
+    //fileName.js : 
+    let args = process.argv;
+    for (let i = 2; i < args.length; i++)
+    {
+        console.log("hello to", args[i]);
+    }
+
+->Switching to ES6 modules:
+    Warning Message: The warning message appears when working with ES modules in Node.js, indicating that the type field in package.json is not set to "module".
+    Solution:
+        1. Open package.json.
+        2. Add "type": "module" at the top level of the JSON object.
+        3. Save the changes.
+        4. Restart Node.js if it was running.
+    Purpose: Setting "type": "module" informs Node.js that the project uses ES module syntax (import and export), allowing proper interpretation of JavaScript files.
+
+->NPM
+
+->when you do npm init then a package.json and package.lock.json and nodemodules folder will be created and package.json contains the project details that you specified to it in cli.Package lock json file will have the exact versions of  node modules init and when you npm install then it wont install the updated node modules into your project but the exact versions of modules used while creating the project for the first time so that you wont install the latest version and dont face any compatability issues.
+
+->NPM (Node Package Manager) is a package manager for Node.js, a popular JavaScript runtime environment used for building server-side applications. NPM allows developers to easily install, manage, and share dependencies or packages (code libraries and tools) for their Node.js projects.
+
+->npm commands:
+
+    # Initialize a new Node.js project in the current directory
+    npm init
+
+    # Install a package locally (dependency)
+    npm install package_name
+
+    # Install a package globally (accessible from anywhere)
+    npm install -g package_name
+
+    # Install packages listed in package.json
+    npm install
+
+    # Install a package and save it as a development dependency
+    npm install package_name --save-dev
+
+    # Uninstall a package
+    npm uninstall package_name
+
+    # Update a package to its latest version
+    npm update package_name
+
+    # Run a script defined in package.json
+    npm run script_name
+
+    # Display outdated packages
+    npm outdated
+
+    # List installed packages
+    npm list
+
+    # Search for packages
+    npm search package_name
+
+    # View information about a package
+    npm info package_name
+
+    # To initialise a folder as node project without answering any questions
+    npm init -y
+
+->if you install a package locally then it is avaliable only in that project folder and if you install it globally then it is available in all the project folders.
+
+->node modules all comes under the nodemodules folder when installed and when you do npm install then all the dependency packages listed in the package.json dependency category will be downloaded into the nodemodules folder.When a package is dependent on another package then it is a dependency.
+
+->LIBRARY VS FRAMEWORK:
+    Library (axios):
+        - Definition: A library like axios is a reusable set of functions and utilities that simplifies making HTTP requests in JavaScript applications.
+        - Characteristics:
+          - Axios focuses on a specific task: handling HTTP requests.
+          - Developers explicitly call axios functions to perform tasks like sending GET or POST requests.
+        - Example: Axios helps developers send HTTP requests and handle responses easily in JavaScript applications.
+
+    Framework (Express):
+        - Characteristics:
+        - Definition: A framework like Express is a structured set of tools and conventions for building web applications and APIs in Node.js.
+          - Express provides a comprehensive solution for building web servers and defining routes.
+          - Developers follow Express's structure and patterns to build applications, including defining routes, middleware, and handling HTTP requests.
+        - Example: Express simplifies building web servers and APIs in Node.js by providing a predefined structure and tools.
+
+->
