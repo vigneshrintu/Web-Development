@@ -1,0 +1,13 @@
+->You can pass mutliple callback function to the get method or even a single callback function or even no callback
+function at all.
+->But to pass dual or morethan dual callback functions to the get method,we need to use arrow functions and separate
+them via comma.
+->We can even pass an array of callback functions to the get method so that one gets executed after another in a sequence.
+->We can only send one response at a time to the client so we must use res.send("some respone")
+in the last callback function only and above functions which gets executed before the last back functions must
+have next as a parameter in them and next() must be invoked inside them except for the last method.
+->next() tells a function that it needs to call another callback function beside it or below it.
+->If you donot use next attribute and next() then only that particular function will gets executed and 
+rest of the callback functions wont get executed and same goes to a function which sends response then rest
+of the functions below it wont get executed.
+

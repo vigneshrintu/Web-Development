@@ -1,0 +1,6 @@
+->We have organised the routes definiation in another dir called routes and made a file
+student.js which has all the routes defined init.
+->Then exported them at the end of the student.js file.
+->Then imported them in our main js file and used them via middleware function app.use() so now 
+we donot have to do anything now whenever the client enters the route in his browser then those routes
+that we have defined will redirect him and sends respective route response.
