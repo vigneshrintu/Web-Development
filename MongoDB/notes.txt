@@ -10,3 +10,6 @@
     User variable is the model here.
 ->mongoose uses operational buffer which means it will load all the models and code until a connection is established between db and server and as soon as connection is established it saves and retrieves but till then it manages so that we donot have to use await before connection keyword.
 ->all operation happening on the model named here User is actually happening on local model and getting updated on server by mongoose.
+->MongoDB can be downloaded from mongoDB.com/resources
+->MongoDB shell can be downloaded from the mongoDB.com/mongoshell and that zip file contains the mongoDB.exe and we need to give its path in environment variables.
+->Download mongoDB extension and run the mongosh shell using mongosh command.
