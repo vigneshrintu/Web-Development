@@ -87,4 +87,13 @@
           - Developers follow Express's structure and patterns to build applications, including defining routes, middleware, and handling HTTP requests.
         - Example: Express simplifies building web servers and APIs in Node.js by providing a predefined structure and tools.
 
+->REPL means read evalute print loop means an area where we can run our code.By typing node and hitting enter
+we will be bought into terminal REPL for JS.
+
+->We need to have package.json file created in every dir where ever we want to use import keyword.
+
+->We can create a server in nodejs but now everybody started using expressjs to create a server.
+
+->We can do routing in nodejs but nobody does that these days because expressjs is used for that too.
+
 ->
