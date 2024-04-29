@@ -1,0 +1,6 @@
+->Whenever you have to update the data in useState's value varible,you have to clone it and then update it inside the set function.Cloning syntax is this ...identifierName
+->In 13f, forms actually recieve input box text data we enter but react donot rerenders as we type in so UI remains the same but value attribute is getting updated with typed data so we have to handle it using onChange() and rerender UI as value changes.
+->useState should not be used within conditionals,loops.react hooks should be at the top level and they should not be nested inside loops conditionals functions at all.
+->same as with useEffect.
+->whenever we want to change the state of the react object then first of all we need to give react a brand new object means a copy of the original current object.
+->if you want to run useEffect conditionally then you have write the condition inside useEffect hook.
