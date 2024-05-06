@@ -1,0 +1,15 @@
+->React hooks should be at the top level and they should not be nested inside loops conditionals functions at all.
+->npm i to install all dependencies listed in the package.json and package.lock.json files and run this command in the directory where those two files are present.
+->React runs All the hooks on client side and use client makes the component client component and let's developers use hooks of react in next js and hooks do things like dom.
+->UI libs : 
+tailwindcomponents, (provides full blown website templates for free)
+tailblocks, (base free components are awesome)
+materialui, (don't know how to use it)
+daisyui, (components are great)
+aceternityui, (next level animations)
+reactbootstrap, (exact bootstrap)
+shadcnui, (great)
+uiverse (plane html css js).
+->React revolutionizes single-page application (SPA) development by consolidating all code into a single file, typically named index.js, streamlining the development process. Unlike traditional multi-page applications, React dynamically updates the user interface (UI) without refreshing the entire page. This efficiency is achieved through selective DOM manipulation, where React injects and removes code to render only the sections of the page that require updates. In contrast to anchor tags, which trigger full page refreshes, React's next/link component, commonly used in frameworks like Next.js, updates specific UI sections seamlessly, enhancing the user experience by minimizing unnecessary reloads.
+->In the development process facilitated by React, all the application's code is typically compiled and bundled into a single JavaScript file, often named index.js. This file is responsible for injecting the code from the main application file, such as App.js, into the root element of the HTML document, often referred to as the root div. This injection process establishes the connection between the React application and the Document Object Model (DOM), enabling the rendering of the application's components and user interface within the designated root div. Through this mechanism, React efficiently manages the presentation layer of the application, dynamically updating and rendering components as required without the need for full page reloads.root div is in index.html where all the code gets injected during build process.
+->use ts for plane ts and tsx for components in ts and same goes for js and jsx and js and jsx,,, ts and tsx can be used interchangeably.

@@ -1,0 +1,25 @@
+->While designers and developers call it as typorgraphy, rest of the world calling it as Typography.
+->Always design the website by keeping the targeted audience in the mind like if you are designing a website for developers then you can go a little bit complex with your component they will any way navigate through the website whereas common people cannot handle that website like bootstrap is easier for devs but not for designers.
+->Try not to use morethan 2 fonts and preferred fonts are : 
+    - Inter
+    - Montserrat
+    - DM Sans
+    - Raleway
+    - Roboto
+->Try not to use more than 4 colors and that to generate all those colors using color pallate generating websites and use those color pallates to design the website.There are primary,secondary colors in the website and you will use primary more and followed by secondary.
+->Same as with fonts so store fonts and colors in css varibales to reuse them in the code so that you donot have to change them at multiple places when you have to try out different fonts and colors.Those varible names should be ideally primary-color,secondary-font.
+->Always use less images as they will slow down your websites but use them wisely as they bring life to a website.
+->Always use flexbox to maintain responsiveness and for complex animated mind-blowing components, responsiveness is not possible so try not to use those components which are not responsive.
+->Design a component and copy paste it multiple times like the video sections of youtube and product sections of amazon.
+->Icons should be used.
+->Using few same colors and fonts brings consistency in websites.
+->Simple and consistent websites are beautiful and user-friendly and complex animated websites should be only be made to impress someone.Apple and dev portfolios are very complex and animated because they should impress people and recruiters where as amazon and youtube are simple because they need to be user friendly.
+->Website is mostly static content which serves as a pamplet with limited interactivity where designs and animations and its content matters the most where as Webapp is mostly simple UI with more interactive dynamic content where it serves as need like amazon and Website example is Wikipedia.
+->UI determines UX.
+->Sizing and spacing in CSS components should always be in multiples of 4 since it is more noticeable when UI changes and makes our website consistent.
+->Always use classname as descriptive like hero--section--heading or hero-section-title so that it makes sense.
+->Web developerzzzz don't even know what is hero section, browser debugging tools usage, web performance using Google's lighthouse and web vitals chrome extensions, scaling and css variables that can change all font with just one line change and also no designer attitude and idea about Google's minimalistic web design principles.
+->66.6% of traffic uses phones so we first go with mobile first design and 33.3% uses desktops.Although this entirely depends on the website like bootstrap recieves more traffic of desktop users than mobile phone users.
+->Use respective html tag to make screen reader work easy for maintaining acessibility.Like use footer tag for footer and nav tag for navbar not like divs all over the code.
+->Donot use tables for anything since it makes it harder to make them responsive and changes.Tables should only be used for tables.
+ 
