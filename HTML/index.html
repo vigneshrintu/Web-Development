@@ -1,0 +1,225 @@
+<!-- HTML tags are not case sensitive: <P> means the same as <p>. -->
+
+<!-- Note: The content inside the <body> section will be displayed in a browser. The content inside the <title> element will be shown in the browser's title bar or in the page's tab. -->
+
+<!-- Some HTML elements have no content (like the <br> element). These elements are called empty elements. Empty elements do not have an end tag! -->
+
+<!--
+The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the HTML page
+The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+The <h1> element defines a large heading
+The <p> element defines a paragraph 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="this is displayed under title at google search">
+
+    <title>this will be appeared as title at google search and name of the tab</title>
+
+    <link rel="idontknow" type="idontknow" href="favicon link">
+    <!-- favicon is the image that is displayed for your website on tab name side -->
+
+
+
+</head>
+<body style="background-color:yellow;">
+    <a href="link to where you want redirect">if you click this text then you will get to that link directed page</a>
+    <!-- you can even use an image tag in place of "if you click this text then you will get to that link directed page" -->
+    <!-- HTML Links - The target Attribute
+        By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+        The target attribute specifies where to open the linked document.
+        The target attribute can have one of the following values:
+        _self - Default. Opens the document in the same window/tab as it was clicked
+        _blank - Opens the document in a new window or tab
+        _parent - Opens the document in the parent frame
+        _top - Opens the document in the full body of the window -->
+        <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+<br>
+<!-- this tag adds a line break and without this tag all contents will be displayed side by side as cpp cout without endl and \n -->
+
+    <img src="image url link or its path in your pc" alt="this text gets displayed when image wont" width="104" height="142">
+    <!-- if you set height or width then the other will get set automatically -->
+    <!-- src means source -->
+    <!-- There are two ways to specify the URL in the src attribute:
+1. Absolute URL - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".
+2. Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page
+(means that our image is in our current working directory). Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain
+(means there is a folder images and in that there is our image img_girl.jpg). Example: src="/images/img_girl.jpg". -->
+<!-- absolute URL (a full web address) -->
+<!-- A local link (a link to a page within the same website) is specified with a relative URL  -->
+<p><a href="https://www.w3.org/">Absolute URL</a></p>
+<p><a href="/css/default.asp">Relative URL</a></p>
+
+<br>
+
+<!-- there are h1 to h6 tags which are used to define headings in them and bigger the tag number lesser the importance and these dont need any br tags  -->
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<!-- A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph. -->
+<p title="i will be displayed">if your cursor comes here.</p>
+<p>this is a paragraph tag and the new lines are not displayed and everything gets displayed side by side </p>
+
+<pre>
+    this tag displays the content in it as it is                   and 
+    
+    preserves spaces and new lines unlike paragraph tag
+   </pre>
+
+<hr>
+<!-- this tag is used to add line horizontally -->
+
+
+<!-- <tagname style="property:value;"></tagname> -->
+<!-- here style is an attribute -->
+<h1 style="background-color:powderblue;">this text block will be displayed in mentioned color</h1>
+<p style="background-color:tomato;">this is paragraph will be displayed in tomato color.</p>
+<h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p>
+<h1 style="font-size:300%;">This is about font size</h1>
+<p style="font-size:160%;">This is about font size.</p>
+<h1 style="font-family:verdana;">This is a different font</h1>
+<p style="font-family:courier;">This is a different font.</p>
+<h1 style="color:blue;">This is coloured text </h1>
+<p style="color:red;">This is coloured text </p>
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+<hr>
+
+<p><i>italic text</i> <b>bold text</b> <u>underlined text</u> <strong>important text</strong> CO <sub>2</sub> <sup>-2</sup> <q>quotations </q></p>
+
+<!-- HTML links are hyperlinks -->
+<!-- A link does not have to be text. A link can be an image or any other HTML element! -->
+
+<table>
+    <tr>
+      <th>row 1 and bold since we used th tags</th>
+      <th colspan="3">SPANSNROWS</th>
+      
+    </tr>
+    <tr>
+      <td>row 2</td>
+      <td>row 2</td>
+      <td>row 2</td>
+    </tr>
+    <tr>
+      <td>row 3</td>
+      <td>row 3</td>
+      <td>row 3</td>
+    </tr>
+  </table>
+
+  <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+  <!-- here a is a tag but href and target are attributes so always attributes come up with string kind of quotations -->
+
+<!-- this is a recommended format to follow  -->
+<body>
+    <header>contains nav tag</header>
+    <main>
+        <section>idontknow</section>
+        <article>idontknow</article>
+        <aside>side ads should be enclosed in this tag</aside>
+    </main>
+    <footer></footer>
+</body>
+
+<div>this tag encloses tags and creates a unit and you can use this unit later on for any css styling or javascript section identifier</div>
+
+<span>this is an inline container and takes only required amount of space</span>
+
+<!-- this is a ordered list and lists items by numbers -->
+<ol>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ol> 
+
+  <!-- this is an unordered list and lists items by a symbol -->
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+  <!-- The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc. -->
+    <!-- it is a common practice that id and value should be same -->
+    <!-- NOTE if the name attribute is same for n labels then we can only choose one option among those labels and an example is below -->
+    you can select only one option from belpw
+    <form>
+      <input type="radio" id="id1" name="inputunitA" value="id1">
+      <label for="id1">OPTION1</label><br>
+
+      <input type="radio" id="id2" name="inputunitA" value="id2">
+      <label for="id2">OPTION2</label><br>
+    </form>
+
+    <!-- NOTE if the name attribute is different for n labels then we can choose labels -->
+    you can select any both options from below
+    <form action="/action_page.php">
+      <input type="radio" id="id4" name="inputunitB" value="id4">
+      <label for="id4">OPTIONB</label><br>
+
+      <input type="radio" id="id3" name="inputunitC" value="id3">
+      <label for="id3">OPTIONC</label><br>
+    </form>
+
+
+
+    <form action="/action_page.php">
+      <label for="id7">First name:</label><br>
+      <input type="text" placeholder="enter" id="id7" name="idontknow" value=""><br>
+
+      <label for="id6">Last name:</label><br>
+      <input type="text" placeholder="enter" id="id6" name="idontknow" value=""><br><br>
+
+      <input type="submit" value="submit button name">
+    </form>
+
+
+
+    <textarea name="id9" id="id9" cols="30" rows="10" placeholder="enter"></textarea>
+
+
+
+    <input type="checkbox" id="id8" name="idontknow" value="id8">
+    <label for="id8">tick here</label><br>
+
+
+
+    <select name="id5" id="id5">
+      <option value="idontknowaboutvalueattribute">opion1</option>
+      <option value="idontknowaboutvalueattribute">opion2</option>
+      <option value="idontknowaboutvalueattribute">opion3</option>
+    </select>
+
+
+    <!-- for more info refer mdn docs and html of w3schools -->
+   
+
+
+
+
+
+
+
+
+
+  
+
+
+</body>
+</html>

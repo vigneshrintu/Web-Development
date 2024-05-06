@@ -1,0 +1,160 @@
+->  <script src="path/to/script.js"></script>
+-> script tag is placed at the end of the body tag(inside)
+-> Dynamically typed means datatypes are not needed to be specified while declaring the identifiers like variables,functions etc.
+
+->Datatypes
+    var fullName = "Tony Stark";
+    var age = 24;
+    var price;
+    var radius = 99.99;
+    var a = 14;
+    var b = null;
+    var Y = undefined;
+    var isFollow = true;
+    var z; //undefined
+
+->Identifier Name Rules
+    Case sensitivity: Variable names are case-sensitive; "a" and "A" are different.
+    Allowed characters: Only letters, digits, underscores (_), and the dollar symbol ($) are allowed; no spaces.
+    First character: Only a letter, underscore (_), or dollar symbol ($) can be the first character of a variable name.
+    Reserved words: Reserved words cannot be used as variable names.
+
+->var:
+- Re-declaration & update allowed
+- Global scope
+- ex : var x=0;var x=1; is allowed
+
+->let:
+- No re-declaration, but update allowed
+- Block scope
+
+->const:
+- No re-declaration or update
+- Block scope
+- const variable cannot be used to store any other values after it is used once for something
+
+->JS tries to convert number into strings rather than into ascii respective character.
+->Coercion is the automatic conversion of values from one data type to another during operations.(kind of implicit conversion)
+
+->Operators
+- a=a**4; // a=a^4
+- == is the equality operator, and === is the strict equality operator.
+- == converts values to a common type before comparison and only compares values.
+- === compares both values and data types without conversion.
+- 25=="25" is true but 25==="25" is false.
+
+->alert("displayed on top one time popup");
+
+->prompt("displayed while taking input on top & returns anything entered as string");
+
+->for of loop for arrays and strings
+    for(val of arr){
+        console.log(val);
+    }
+
+->for in loop for arrays and objects
+    for (key in object) {
+        console.log(key, object[key]);
+    }
+
+->Strings 
+String Immutability:
+- Strings in JavaScript are immutable, meaning their values cannot be changed after they are created.
+- When you try to execute str[0] = 'g', it won't result in an error, but it won't change the string either. The JavaScript engine will simply ignore the assignment.So use replace method for this which creates a new string.
+- let str = "Apna College";
+- str.length;
+- str[0], str[1], str[2]; // Returns "A", "p", "n"
+-String immutablility:
+    let str = "IloveJS";
+    let newStr = str.replace("U", "S");
+    console.log(newStr); // Output: "UloveJS"
+    console.log(str); // Output: "IloveJS"
+    str[0]="V";
+    console.log(str); //Output: "IloveJS"
+
+->Template Literals in JS:(kind of fstrings of Python)
+- A way to have embedded expressions in strings.
+- Example:
+    let specialString = `This ${obj.item} is ${obj.price} rupees`;
+    console.log(typeof specialString); // Output: "string"
+-> String Interpolation:
+- To create strings by doing substitution of placeholders.
+- Example:
+    `sometext ${expression} sometext`
+
+->String Methods in JS:
+- str.toUpperCase()
+- str.toLowerCase()
+- str.trim() // removes whitespaces
+- str.slice(start, end?) // returns part of string
+- str.replace(searchVal, newVal)
+- str.charAt(idx)
+- concatenation: "hello"+"there"
+- escape characters like newline tab works
+
+->Arrays 
+- let arr = ["rahul", 86, "Delhi"];
+
+- Push(): Adds elements to the end of an array.
+- Example:
+    let foodItems = ["potato", "apple", "litchi", "tomato"];
+    foodItems.push("chips", "burger", "paneer");
+    console.log(foodItems);
+
+- Pop(): Removes the last element from an array and returns it.
+
+- toString(): Converts an array to a string.
+- Example:
+    let str = foodItems.toString();
+    console.log(str);
+
+- Unshift(): Adds elements to the start of an array.
+- Example:
+    foodItems.unshift("bread", "cheese");
+    console.log(foodItems);
+
+- Shift(): Removes the first element from an array and returns it.
+- Example:
+    let removedElement = foodItems.shift();
+    console.log(removedElement);
+
+->Map Method in JavaScript
+- The map() method in JavaScript is used to transform each element of an array according to a provided function.
+- It returns a new array containing the results of applying the provided function to each element of the original array.
+- The original array remains unchanged.
+- Syntax:
+  let newArray = array.map(callbackFunction);
+
+->Filter Method
+- Creates a new array of elements that pass a test (condition) provided by the callback function.
+- Example: Filtering even elements from an array
+    let newArr = arr.filter((val) => {
+      return val % 2 === 0;
+    });
+
+->Reduce Method
+- first arg will be passed onto next iteration every time and second arg is reset in every iteration.
+- first arg points to zeroth index and second arg points to the oneth index.
+- Example: Adding all numbers in an array
+    const numbers = [1, 2, 3, 4, 5];
+    const total = numbers.reduce((sum, num) => {
+      return sum + num;
+    }, 0);
+    console.log(total); // Output: 15
+- Example: Finding the maximum number in an array
+    const nums = [10, 5, 20, 8];
+    const maxNum = nums.reduce((max, num) => {
+      return max > num ? max : num;
+    });
+    console.log(maxNum); // Output: 20
+
+->
+
+
+
+
+
+
+
+
+

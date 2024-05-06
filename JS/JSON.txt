@@ -1,0 +1,25 @@
+JSON (JavaScript Object Notation)
+
+- JSON is a lightweight data-interchange format.
+- It stands for JavaScript Object Notation.
+- It is text-based and human-readable.
+- It is easy to parse and generate data in JSON format.
+- JSON is language-independent, meaning it can be used with any programming language.
+- JSON is often used for transmitting data between a server and a web application.
+- JSON syntax is a subset of JavaScript object literal notation, but it's more restricted.
+- JSON data consists of key-value pairs, similar to JavaScript objects.
+- Keys must be surrounded by double quotes, and only simple data types like strings, numbers, booleans, arrays, and objects are allowed.
+- Example of JSON data:
+    {
+        "name": "John",
+        "age": 30,
+        "city": "New York",
+        "isStudent": true,
+        "hobbies": ["reading", "hiking", "coding"],
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "zip": "12345"
+        }
+    }
+- JSON is widely used in web development for exchanging data between client and server applications.

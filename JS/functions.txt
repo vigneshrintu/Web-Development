@@ -1,0 +1,29 @@
+->
+- function functionName(param1, param2) {
+  
+  }
+- functionName();
+- we can store functions in variables that means we can even pass them as arguments and store inside arrays in JS.
+- let arrowFunctionBro = (a, b) => {
+  return a * b;
+  };
+  here we can use arrowFunctionBro varibale to store another value like arrowFunctionBro=5
+  but when you use const inplace of let then we cannot change its content.
+- we donot have to specify return type of function and type of parameters in JS.
+
+-> forEach Loop in Arrays
+- Syntax:
+    arr.forEach(callbackFunction)
+- CallbackFunction: 
+    A function to execute for each element in the array.
+    A callback is a function passed as an argument to another function.
+- Using arrow function as the callback function or you can even store whole arrow function into a variable and pass that variable
+    arr.forEach((val) => {
+      console.log(val);
+    });
+- forEach(func,index,arr) and func is mandatory arg where as index and arr are optional
+
+
+
+
+

@@ -1,0 +1,82 @@
+-> setTimeout(FunctionName,TimeLimit);
+-> we do callback nesting which results in callback hell just to make sure that the asynchronous js code 
+becomes synchronous.Means we want to hold the below functions or code's execution until the current one
+completes its execution.But in JS if timelimit is set for one function then browser automatically runs that
+function in background and JS executes the code below it.So callback nesting lets you hold those code and functions
+execution until  the current function completes its execution.
+-> callback nesting will complexifies the code readability so we use promises with then and catch to make
+sure the code readability is maintained.
+-> whenever we return a promise then we must handle them using "then" and "catch" keyword.
+->whenever we put timer for red green yellow blue colors to appear in background after 1 sec then all gets executed at once
+and we feel like only blue is appeared but when we use await with all colors after one second red appears and after one second
+green appears and after one second yellow appears and after one second blue appears.
+->fetch is an asynchronous function so it returns a promise.
+-> ASYNC AND AWAIT KEYWORD : 
+
+    // async function example
+    async function fetchData() {
+      try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    // Main points about async and await keywords:
+    /*
+    1. async Function:
+    - The async keyword is used to define a function as asynchronous.
+    - It enables the use of the await keyword within the function.
+    - An async function always returns a promise.
+    - Syntax:
+      async function functionName() {
+        // Asynchronous operations
+      }
+
+    2. await Operator:
+    - The await keyword is used inside an async function.
+    - It pauses the execution of the code below it until a Promise is settled (resolved or rejected).
+    - It allows asynchronous code to look and behave like synchronous code.
+    - Syntax:
+      let result = await someAsyncOperation();
+    - await can be used with any function that returns a Promise.
+    - When await is used, it waits for the Promise to resolve, and then it returns the resolved value. If the Promise is rejected, it throws an error.
+    */
+
+    // Example usage of async function
+    fetchData();
+
+
+
+
+->AXIOS HTTP JS LIBRARY : 
+
+    const axios = require('axios');
+    
+    // Example of fetching data using Axios
+    async function fetchData() {
+      try {
+        // Making a GET request using axios.get()
+        let response = await axios.get('https://api.example.com/data');
+        console.log(response.data);
+      } catch (error) {
+        // Handling errors using try...catch
+        console.error('Error fetching data:', error);
+      }
+    }
+    
+    // Main points about Axios:
+    /*
+    1. Promise-based: Axios uses promises for asynchronous operations, allowing for cleaner and more readable code.
+    2. Browser and Node.js support: Works seamlessly in both browser and Node.js environments.
+    3. Request and response interception: Allows modification of requests or responses before they are sent or received.
+    4. Automatic JSON parsing: Axios automatically parses JSON responses, simplifying data handling.
+    5. Canceling requests: Provides the ability to cancel requests, useful for handling user navigation scenarios.
+    6. Error handling: Simplifies error handling with automatic rejection of promises on request failure.
+    */
+    
+    // Example usage of fetchData function
+    fetchData();
+    

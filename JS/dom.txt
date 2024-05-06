@@ -1,0 +1,50 @@
+->The DOM represents an HTML document as a tree of
+nodes.
+->document.getElementById("id"); is returning the whole html tag
+->getElementBySomething might also return html collection or list of nodes so indexing is used to acess individuals.
+->document.querySelector(".class"); returns the first html tag with given class name
+->document.querySelectorAll("#id"); returns the html collection or nodes list with given id's 
+->document.getElementBySomething("id").parentNode; returns the immediate parent html tag
+->document.getElementBySomething("class").childNodes; returns the list of nodes of child of the parent with provided className
+->
+    <div>
+    PARENT ELEMENT IS DIV AND CHILD ELEMENTS ARE PARAGRAPHS
+        <p>iam previous sibling of mid p tag</p>
+        <p class="midptag">iam mid p tag</p>
+        <p>iam next sibling of mid p tag</p>
+    </div>
+
+    -document.getElementByClass("midptag).previousElementSibling;
+    -document.getElementByClass("midptag).nextElementSibling;
+->Use parentNode.appendchild() method to add a node to the end of the list of child nodes of a specified parent node.
+->Use parentNode.append(node1,node2,..nodeN) method to add n nodes to the end of the list of child nodes of a specified parent node.
+->Use parentNode.prepend(node1,node2,..nodeN) method to add n nodes to the start of the list of child nodes of a specified parent node.
+->
+    let menu = document.createE1ement("div");
+    div.id="newid";
+    div.className="newclass";
+    div.innerHTML = "<p>We1come to GreatStack</p>";
+    document.body.appendChi1d(div);
+->innexText only returns visible elements text data and does not return display:none elements text data
+->textContent returns all elements text data
+->We can use after() method to insert one or more nodes after the element.
+    node1.after(node2,node3,node4,...nodeN);
+->parentNode.replaceChild(newChild, oldChild);
+->let newNode = originalNode.cloneNode();
+->parentNode.removeChild(parentNode.lastElementChild);
+->console.log(SomeElement.attributes); returns node list of attributes of SomeElement
+->SomeElement.getAttribute("attributeName");
+->SomeElement.setAttribute("attributeName","attributeValue");
+->SomeElement.hasAttribute("attributeName");boolean returned
+->SomeElement.style.padding="10px";
+->SomeElement.style.cssText="padding:10px";//to add new style by removing all previous styles
+->SomeElement.style.cssText += "padding:10px";//to add new style without removing all previous styles
+->SomeElement.className += "addAnotherClass";//this works the same as above style.cssText since += is used
+->SomeElement.classList.add("class1","class2",.."classN");//adds the new classes along with existing classes
+->SomeElement.classList.remove("class1","classN");
+->SomeElement.classList.replace("oldClass","newClass");
+->SomeElement.classList.contains("Class1");returns boolean
+->SomeElement.classList.toggle("Class1");adds Class1 if not present and removes if present
+->
+
+

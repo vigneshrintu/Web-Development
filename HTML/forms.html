@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+
+
+  <!-- <hr>adds black horizontal line -->
+  <!-- <br>adds horizontal line space or block level space -->
+
+  <!-- Notice that each input field must have a name attribute to be submitted.
+  If the name attribute is omitted, the value of the input field will not be sent at all. -->
+
+  <!-- The <input type="submit"> defines a button for submitting the form data to a form-handler.
+  The form-handler is typically a file on the server with a script for processing input data.
+  The form-handler is specified in the form's action attribute. -->
+
+  <form action="/action_page.php">
+    <!-- The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together. -->
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Defaultly filled first bro"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="appears like this"><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+  <br>
+  <hr>
+  <br>
+  <p>Select your gender</p>
+  <form>
+    <!-- Radio buttons let a user select ONE of a limited number of choices. -->
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="gay" name="gender" value="gay">
+    <label for="gay">Gay</label><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+  <br>
+  <hr>
+  <br>
+  <p>Select all the vechiles you own</p>
+  <form>
+    <!-- You can select multiple options ranging from zero to all using checkboxes -->
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+  <br>
+  <hr>
+  <br>
+  <label for="cars">Choose a car:</label>
+  <!-- The <select> element defines a drop-down list -->
+    <form action="">
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="reset" value="Reset">
+    </form>
+
+<br>
+<hr>
+<br>
+<form action="">
+  <textarea name="message" rows="10" cols="30">
+    INPUT AREA FOR HUGE INPUTS OTHER THAN SMALL INPUTS LIKE FORMS
+  </textarea>
+  <input type="reset" value="Reset">
+</form>
+<br>
+<hr>
+<br>
+<!-- <input type="password"> defines a password field: -->
+<label for="pwd">Password:</label><br>
+<input type="password" id="pwd" name="pwd">
+<br>
+<hr>
+<br>
+<form>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="reset" value="Reset">
+</form>
+<br>
+<hr>
+<br>
+<form>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+</form>
+<br>
+<hr>
+<br>
+<form>
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile">
+</form>
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
