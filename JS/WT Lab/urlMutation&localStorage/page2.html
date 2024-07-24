@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page 2 - Form Data Display</title>
+  </head>
+  <body>
+    <h1>Form Data Display</h1>
+    <script>
+      // Get the current URL
+      const url = new URL(window.location.href);
+
+      // Extract query parameters
+      /*
+        URL Search Method (url.search)
+The url.search property of a URL object returns the query string portion of a URL, including the '?' character. For example, in the URL https://example.com/page?param1=value1&param2=value2, url.search would be ?param1=value1&param2=value2.
+*/
+      const params = new URLSearchParams(url.search);
+
+      // Initialize an object to store form data
+      const formData = {};
+
+      // Collect data from the URL parameters
+      params.forEach((value, key) => {
+        if (!formData[key]) {
+          formData[key] = [];
+        }
+        formData[key].push(value);
+      });
+
+      // Display the data
+      let displayData = "<ul>";
+      for (const key in formData) {
+        displayData += `<li><strong>${key}:</strong> ${formData[key].join(
+          ", "
+        )}</li>`;
+      }
+      displayData += "</ul>";
+
+      // Append the display data to the body
+      document.body.innerHTML += displayData;
+
+      // Store formData in localStorage as a JSON string
+      localStorage.setItem("formData", JSON.stringify(formData));
+
+      // Create a link to navigate to page3.html
+      const link = document.createElement("a");
+      link.href = "page3.html";
+      link.innerText = "Go to Page 3";
+      document.body.appendChild(link);
+    </script>
+  </body>
+</html>

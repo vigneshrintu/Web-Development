@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local Storage As DB</title>
+  </head>
+  <body>
+    <script>
+      // Creating a users array with multiple user objects
+      let users = [
+        {
+          username: "john_doe",
+          email: "john@example.com",
+          password: "123456",
+          age: 30,
+          friends: ["alice", "bob"],
+        },
+        {
+          username: "jane_doe",
+          email: "jane@example.com",
+          password: "abcdef",
+          age: 25,
+          friends: ["charlie", "david"],
+        },
+      ];
+
+      /**
+       * Step 1: Save the users array to localStorage
+       *
+       * We store the array of user objects in localStorage.
+       */
+      localStorage.setItem("users", JSON.stringify(users));
+
+      // Output for verification
+      console.log(localStorage.getItem("users")); // JSON string of the users array
+
+      /**
+       * Step 2: Retrieve the users array from localStorage
+       *
+       * We retrieve the JSON string from localStorage and parse it back to an array of objects.
+       */
+      let retrievedUsers = JSON.parse(localStorage.getItem("users"));
+
+      // Output for verification
+      console.log(retrievedUsers); // Array of user objects
+
+      /**
+       * Step 3: Search for a user by username
+       *
+       * To search for a user, we iterate over the users array using a for loop and check for a matching username.
+       */
+      let searchUsername = "jane_doe";
+      let foundUser = null;
+
+      for (let i = 0; i < retrievedUsers.length; i++) {
+        if (retrievedUsers[i].username === searchUsername) {
+          foundUser = retrievedUsers[i];
+          break;
+        }
+      }
+
+      // Output for verification
+      console.log(foundUser); // {username: "jane_doe", email: "jane@example.com", password: "abcdef", age: 25, friends: ["charlie", "david"]}
+
+      /**
+       * Step 4: Add a new friend to a user's friends list
+       *
+       * To add a new friend, we find the user and push the new friend into the friends array.
+       */
+      if (foundUser !== null) {
+        let newFriend = "eva";
+        foundUser.friends.push(newFriend);
+
+        // Save the updated users array back to localStorage
+        localStorage.setItem("users", JSON.stringify(retrievedUsers));
+      }
+
+      // Output for verification
+      console.log(localStorage.getItem("users")); // Updated JSON string with the new friend added
+
+      /**
+       * Step 5: Add a new user to the users array
+       *
+       * To add a new user, we create a new user object and push it into the users array.
+       */
+      let newUser = {
+        username: "sam_smith",
+        email: "sam@example.com",
+        password: "ghijkl",
+        age: 28,
+        friends: ["john_doe"],
+      };
+
+      retrievedUsers.push(newUser);
+
+      // Save the updated users array back to localStorage
+      localStorage.setItem("users", JSON.stringify(retrievedUsers));
+
+      // Output for verification
+      console.log(localStorage.getItem("users")); // Updated JSON string with the new user added
+    </script>
+    <h1>We are on the DB and checkout the local storage and console for details</h1>
+  </body>
+</html>

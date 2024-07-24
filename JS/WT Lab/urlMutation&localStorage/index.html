@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 1 - Form Submission</title>
+</head>
+<body>
+    <h1>Form Submission</h1>
+    <form id="dataForm" method="get">
+        <!-- Text Input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <!-- Number Input -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <!-- Date Input -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <!-- Select Dropdown -->
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <!-- Radio Buttons -->
+        <label>Subscription Type:</label>
+        <input type="radio" id="basic" name="subscription" value="basic" required>
+        <label for="basic">Basic</label>
+        <input type="radio" id="premium" name="subscription" value="premium" required>
+        <label for="premium">Premium</label><br>
+
+        <!-- Checkbox for Interests -->
+        <label>Interests:</label>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="movies" name="interests" value="movies">
+        <label for="movies">Movies</label><br>
+
+        <!-- Checkbox for Favourite Subjects -->
+        <label>Favourite Subjects:</label>
+        <input type="checkbox" id="cp" name="favourite_subjects" value="cp">
+        <label for="cp">CP</label>
+        <input type="checkbox" id="dsa" name="favourite_subjects" value="dsa">
+        <label for="dsa">DSA</label>
+        <input type="checkbox" id="web" name="favourite_subjects" value="web">
+        <label for="web">Web</label>
+        <input type="checkbox" id="ai" name="favourite_subjects" value="ai">
+        <label for="ai">AI</label>
+        <input type="checkbox" id="ml" name="favourite_subjects" value="ml">
+        <label for="ml">ML</label>
+        <input type="checkbox" id="devops" name="favourite_subjects" value="devops">
+        <label for="devops">DevOps</label><br>
+
+        <!-- Textarea -->
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(event.target); // Capture form data
+
+            // Create URL for the next page
+            const url = new URL(window.location.origin + '/page2.html');
+
+            // Collect all form data into URL search params
+            formData.forEach((value, key) => {
+                url.searchParams.append(key, value);
+            });
+
+            // Navigate to the new URL
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+//start mysql server by going to services.msc and search for mysql80 and start it then your workbench starts
+JavaScript Concepts Overview
+
+URL Search Method (`url.search`)
+The `url.search` property of a `URL` object returns the query string portion of a URL, including the '?' character.
+For example, in the URL `https://example.com/page?param1=value1&param2=value2`, `url.search` would be `?param1=value1&param2=value2`.
+
+// Example of using URL and url.search
+const url = new URL('https://example.com/page?param1=value1&param2=value2');
+const searchParams = url.search;
+console.log(searchParams); // Output: "?param1=value1&param2=value2"
+
+URLSearchParams
+`URLSearchParams` is a built-in object in JavaScript that provides an easy way to work with query string parameters in URLs.
+It allows you to create, manipulate, and iterate over query parameters in a URL.
+
+// Example of using URLSearchParams
+const urlParams = new URLSearchParams('?param1=value1&param2=value2');
+urlParams.append('param3', 'value3');
+console.log(urlParams.toString()); // Output: "param1=value1&param2=value2&param3=value3"
+
+URL Object
+The `URL` object in JavaScript provides a convenient way to parse, construct, and manipulate URLs.
+It allows you to easily access various parts of a URL (like protocol, hostname, path, query parameters, etc.) using its properties and methods.
+
+// Example of using URL Object
+const urlObject = new URL('https://example.com/page?param1=value1');
+console.log(urlObject.hostname); // Output: "example.com"
+console.log(urlObject.searchParams.get('param1')); // Output: "value1"
+
+JSON Parse and Stringify
+`JSON.parse()` converts a JSON string into a JavaScript object.
+`JSON.stringify()` converts a JavaScript object into a JSON string.
+
+// Example of using JSON.stringify() and JSON.parse()
+const obj = { name: 'John', age: 30 };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: '{"name":"John","age":30}'
+
+const parsedObj = JSON.parse(jsonString);
+console.log(parsedObj.name); // Output: "John"
+
+LocalStorage Methods
+`localStorage` is a feature in modern web browsers that allows you to store key-value pairs locally within the user's browser.
+It persists even after the browser window is closed.
+
+// Example of using localStorage
+localStorage.setItem('username', 'JohnDoe');
+const storedUsername = localStorage.getItem('username');
+console.log(storedUsername); // Output: "JohnDoe"
+
+localStorage.removeItem('username');
+
+innerHTML Property
+The `innerHTML` property of an element in the DOM allows you to get or set the HTML content inside that element.
+It can be used to dynamically update the content of an element.
+
+// Example of using innerHTML
+const exampleElement = document.createElement('div');
+exampleElement.innerHTML = '<p>Hello, <strong>World!</strong></p>';
+document.body.appendChild(exampleElement);

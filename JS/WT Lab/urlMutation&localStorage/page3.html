@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3 - Form Data Display</title>
+</head>
+<body>
+    <h1>Form Data Display on Page 3</h1>
+    <script>
+        // Retrieve formData from localStorage
+        const formDataString = localStorage.getItem('formData');
+        const formData = JSON.parse(formDataString);
+
+        // Display the data
+        let displayData = '<ul>';
+        for (const key in formData) {
+            if (Array.isArray(formData[key])) {
+                formData[key].forEach(value => {
+                    displayData += `<li><strong>${key}:</strong> ${value}</li>`;
+                });
+            } else {
+                displayData += `<li><strong>${key}:</strong> ${formData[key]}</li>`;
+            }
+        }
+        displayData += '</ul>';
+
+        // Append the display data to the body
+        document.body.innerHTML += displayData;
+
+        //smoothly lightly press that application button to get to local storage
+        localStorage.removeItem('formData');
+        function clearCache() {
+            localStorage.removeItem('formData');
+            alert('Cache cleared successfully!');
+        }       
+        </script>
+        <button onClick="clearCache()">Clear cache</button>
+</body>
+</html>
