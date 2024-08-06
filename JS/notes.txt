@@ -1,5 +1,5 @@
 ->  <script src="path/to/script.js"></script>
--> script tag is placed at the end of the body tag(inside)
+-> script tag is placed at the end of the body tag(inside)(Ask GPT to explain this clear as the tag can be place in the body and at other places too )
 -> Dynamically typed means datatypes are not needed to be specified while declaring the identifiers like variables,functions etc.
 
 ->Datatypes
